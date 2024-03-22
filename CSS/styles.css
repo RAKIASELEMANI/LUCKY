@@ -1,0 +1,110 @@
+@font-face{
+    font-family: Catamaran;
+    src: url(../fonts/Catamaran.ttf);
+}
+@font-face{
+    font-family: GrandHotel;
+    src: url(../fonts/GrandHotel.ttf);
+}
+:root{
+    --primaryColor:#f5bd2a;
+    --secondaryColor:#781310;
+    --mainDark:#3a3e3b;
+    --letterSpacing:0.5rem;
+}
+body{
+    font-family: Catamaran;
+}
+a{
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../IMAGES/IMG_9.JPG.jpg); 
+  height: 100vh; 
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-subtitle{
+    font-family: GrandHotel;
+    color: var(--primaryColor);
+    font-size: 2.5rem;
+    letter-spacing: var(--letterSpacing);
+    animation: slideFromKushoto 2s 1;
+}
+.header-title{
+    color: white;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: var(--letterSpacing);
+    animation: slideFromKulia 2s 1;
+}
+.header-title-thin{
+    color: white;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 100;
+    letter-spacing: var(--letterSpacing);
+    animation: slideFromKushoto 2s 1;
+
+}
+.btn{
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 0.5rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing);
+    font-size: 1.5rem;
+    outline: 2px solid var(--primaryColor);
+    outline-offset: 2px;
+    margin-top: 5rem;
+    animation: bounce 2s 1;ss
+}
+@keyframes slideFromKushoto{
+    0%{
+        transform: translateX(1000px);
+    }
+    50%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromKulia{
+    0%{
+        transform: translateX(-1000px);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
+@keyframes bounce{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.divider{
+    height: 1rem;
+    background: linear-gradient(to right,var(--primaryColor),var(--secondaryColor),var(--primaryColor));
+}
